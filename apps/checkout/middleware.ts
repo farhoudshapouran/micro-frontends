@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // the list of all allowed origins
-const allowedOrigins = ["http://localhost:3000", "https://example-1.com"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://micro-frontends-demo.vercel.app",
+];
 
 export function middleware(request: NextRequest) {
   // retrieve the current response
@@ -18,15 +21,15 @@ export function middleware(request: NextRequest) {
   }
 
   // add the remaining CORS headers to the response
-  response.headers.append("Access-Control-Allow-Credentials", "true");
-  response.headers.append(
-    "Access-Control-Allow-Methods",
-    "GET,DELETE,PATCH,POST,PUT"
-  );
-  response.headers.append(
-    "Access-Control-Allow-Headers",
-    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-  );
+  // response.headers.append("Access-Control-Allow-Credentials", "true");
+  // response.headers.append(
+  //   "Access-Control-Allow-Methods",
+  //   "GET,DELETE,PATCH,POST,PUT"
+  // );
+  // response.headers.append(
+  //   "Access-Control-Allow-Headers",
+  //   "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+  // );
 
   return response;
 }
