@@ -13,7 +13,7 @@ import {
 } from "@repo/data-context/types/product";
 //
 import ProductFilter from "../product-filters";
-import ProductList from "../product-list";
+import ProductGrid from "../product-grid";
 import Head from "next/head";
 
 const defaultFilters: IProductFilters = {
@@ -65,7 +65,7 @@ export default function ProductShopView() {
           <ProductFilter filters={filters} onFilters={handleFilters} />
         </aside>
         <main className="relative py-3 md:gap-10 md:py-6">
-          <ProductList products={dataFiltered} />
+          <ProductGrid products={dataFiltered} />
         </main>
       </div>
     </>

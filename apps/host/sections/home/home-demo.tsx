@@ -5,7 +5,7 @@ import { lazy, Suspense } from "react";
 // routes
 import { paths } from "@repo/utils/routes/paths";
 
-const LatestProducts = lazy(() => import("inspire/latest-products"));
+const LatestProducts = lazy(() => import("product/latest-products"));
 
 export default function HomeDemo() {
   return (

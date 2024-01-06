@@ -12,3 +12,8 @@ declare module "product/search" {
   const ProductSearch: React.ComponentType;
   export default ProductSearch;
 }
+
+declare module "product/latest-products" {
+  const LatestProducts: React.ComponentType<any>;
+  export default LatestProducts;
+}

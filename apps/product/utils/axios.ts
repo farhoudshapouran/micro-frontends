@@ -33,6 +33,8 @@ export const endpoints = {
     list: "/api/products",
     details: (id: string) => `/api/products/${id}`,
     search: "/api/products/search",
+    latest: "/api/products/latest",
+    related: (id: string) => `/api/products/related/${id}`,
   },
 };
 

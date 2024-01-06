@@ -1,7 +1,10 @@
 // components
+import { ScrollArea, ScrollBar } from "@repo/ui/components/scroll-area";
 import ProductItem from "@repo/ui/components/product/product-item";
 // types
-import { IProductItem } from "@repo/data-context/types/product";
+import type { IProductItem } from "@repo/data-context/types/product";
+
+// ----------------------------------------------------------------------
 
 type ProductListProps = {
   products: IProductItem[];
@@ -13,12 +16,19 @@ export default function ProductList({
   loading,
 }: ProductListProps) {
   return (
-    <div className="mx-auto w-full min-w-0 pl-0 xl:pl-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 flex-1">
-        {products.map((product) => (
-          <ProductItem key={product.id} product={product} ratio={5 / 6} />
-        ))}
-      </div>
+    <div className="relative">
+      <ScrollArea>
+        <div className="flex space-x-4 pb-4">
+          {products.map((product, index) => (
+            <ProductItem
+              key={product.id}
+              product={product}
+              className="w-[246px]"
+            />
+          ))}
+        </div>
+        <ScrollBar orientation="horizontal" />
+      </ScrollArea>
     </div>
   );
 }

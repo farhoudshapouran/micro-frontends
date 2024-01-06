@@ -16,7 +16,7 @@ import ProductDetailsCarousel from "../product-details-carousel";
 
 const EmptyContent = lazy(() => import("@repo/ui/components/empty-content"));
 
-const RelatedProducts = lazy(() => import("inspire/related-products"));
+const RelatedProducts = lazy(() => import("@/components/latest-products"));
 
 type Props = {
   id: string;

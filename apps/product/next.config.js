@@ -10,7 +10,6 @@ const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
     checkout: `checkout@${CHECKOUT_APP_URL}/_next/static/${location}/remoteEntry.js`,
-    inspire: `inspire@${INSPIRE_APP_URL}/_next/static/${location}/remoteEntry.js`,
   };
 };
 
@@ -35,6 +34,8 @@ const nextConfig = {
           "./products": "./pages/products/index",
           "./product": "./pages/products/[id]",
           "./search": "./components/search",
+          "./latest-products": "./components/latest-products",
+          "./related-products": "./components/related-products",
           "./pages-map": "./pages-map.js",
         },
         extraOptions: {

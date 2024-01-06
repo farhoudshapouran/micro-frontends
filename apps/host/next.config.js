@@ -7,15 +7,11 @@ const PRODUCT_APP_URL =
 const CHECKOUT_APP_URL =
   process.env.NEXT_PUBLIC_CHECKOUT_APP_URL || "http://localhost:3002";
 
-const INSPIRE_APP_URL =
-  process.env.NEXT_PUBLIC_INSPIRE_APP_URL || "http://localhost:3003";
-
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
     product: `product@${PRODUCT_APP_URL}/_next/static/${location}/remoteEntry.js`,
     checkout: `checkout@${CHECKOUT_APP_URL}/_next/static/${location}/remoteEntry.js`,
-    inspire: `inspire@${INSPIRE_APP_URL}/_next/static/${location}/remoteEntry.js`,
   };
 };
 
