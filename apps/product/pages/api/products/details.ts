@@ -8,8 +8,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseType<IProductItem>>
 ) {
-  const query = req.query;
-  const { id } = query;
+  const { id } = req.query as { id: string };
 
   const product = products.find((item) => item.id === id);
 

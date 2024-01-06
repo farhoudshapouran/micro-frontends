@@ -25,10 +25,14 @@ export function useLatestProducts() {
   return memoizedValue;
 }
 
-export function useRelatedProducts(id: string) {
-  const URL = endpoints.product.related(id);
+// ----------------------------------------------------------------------
 
-  const { data, isLoading, error, isValidating } = useSWR(URL, fetcher);
+export function useRelatedProducts(id: string) {
+  const URL = id ? [endpoints.product.related, { params: { id } }] : null;
+
+  const { data, isLoading, error, isValidating } = useSWR(URL, fetcher, {
+    keepPreviousData: true,
+  });
 
   const memoizedValue = useMemo(
     () => ({

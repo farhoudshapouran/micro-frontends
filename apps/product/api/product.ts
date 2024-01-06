@@ -29,9 +29,11 @@ export function useGetProducts() {
 // ----------------------------------------------------------------------
 
 export function useGetProduct(id: string) {
-  const URL = endpoints.product.details(id);
+  const URL = id ? [endpoints.product.details, { params: { id } }] : null;
 
-  const { data, isLoading, error, isValidating } = useSWR(URL, fetcher);
+  const { data, isLoading, error, isValidating } = useSWR(URL, fetcher, {
+    keepPreviousData: true,
+  });
 
   const memoizedValue = useMemo(
     () => ({
@@ -92,9 +94,11 @@ export function useLatestProducts() {
 // ----------------------------------------------------------------------
 
 export function useRelatedProducts(id: string) {
-  const URL = endpoints.product.related(id);
+  const URL = id ? [endpoints.product.related, { params: { id } }] : null;
 
-  const { data, isLoading, error, isValidating } = useSWR(URL, fetcher);
+  const { data, isLoading, error, isValidating } = useSWR(URL, fetcher, {
+    keepPreviousData: true,
+  });
 
   const memoizedValue = useMemo(
     () => ({

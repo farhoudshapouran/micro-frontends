@@ -8,7 +8,7 @@ import { IProductItem } from "@repo/data-context/types/product";
 // ----------------------------------------------------------------------
 
 export function useGetProducts() {
-  const URL = endpoints.product;
+  const URL = endpoints.product.list;
 
   const { data, isLoading, error, isValidating } = useSWR(URL, fetcher);
 
@@ -29,9 +29,11 @@ export function useGetProducts() {
 // ----------------------------------------------------------------------
 
 export function useGetProduct(id: string) {
-  const URL = `${endpoints.product}/${id}`;
+  const URL = id ? [endpoints.product.details, { params: { id } }] : null;
 
-  const { data, isLoading, error, isValidating } = useSWR(URL, fetcher);
+  const { data, isLoading, error, isValidating } = useSWR(URL, fetcher, {
+    keepPreviousData: true,
+  });
 
   const memoizedValue = useMemo(
     () => ({

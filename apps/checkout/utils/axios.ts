@@ -29,7 +29,10 @@ export const fetcher = async (args: string | [string, AxiosRequestConfig]) => {
 // ----------------------------------------------------------------------
 
 export const endpoints = {
-  product: "/api/products",
+  product: {
+    list: "/api/products",
+    details: "/api/products/details",
+  },
 };
 
 //
