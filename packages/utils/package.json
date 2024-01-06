@@ -1,0 +1,23 @@
+{
+  "name": "@repo/utils",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "clean": "rm -rf node_modules && rm -rf .turbo"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^17.0.12",
+    "@types/numeral": "^2.0.5",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "next": "^14.0.3",
+    "react": "^18.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "numeral": "^2.0.6"
+  }
+}

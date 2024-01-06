@@ -1,11 +1,21 @@
 {
   "name": "micro-frontends",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
+    "build:host": "turbo run build --filter=host",
+    "build:product": "turbo run build --filter=product",
+    "dev": "turbo dev --concurrency=12",
+    "dev:host": "turbo dev --filter=host --concurrency=12",
+    "dev:product": "turbo dev --filter=product --concurrency=12",
+    "start": "turbo run start",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo run clean && rm -rf node_modules"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
@@ -16,9 +26,5 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@1.22.21",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "packageManager": "yarn@1.22.21"
 }
