@@ -8,9 +8,13 @@
   "scripts": {
     "build": "turbo build",
     "build:host": "turbo run build --filter=host",
+    "build:checkout": "turbo run build --filter=checkout",
+    "build:inspire": "turbo run build --filter=inspire",
     "build:product": "turbo run build --filter=product",
     "dev": "turbo dev --concurrency=12",
     "dev:host": "turbo dev --filter=host --concurrency=12",
+    "dev:checkout": "turbo dev --filter=checkout --concurrency=12",
+    "dev:inspire": "turbo dev --filter=inspire --concurrency=12",
     "dev:product": "turbo dev --filter=product --concurrency=12",
     "start": "turbo run start",
     "lint": "turbo lint",
