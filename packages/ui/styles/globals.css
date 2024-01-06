@@ -86,3 +86,8 @@
 .home-latest .product-item:last-child {
   @apply mr-5;
 }
+
+#nprogress .bar {
+  background: theme("colors.blue.600");
+  @apply fixed top-0 left-0 w-full h-0.5 z-50;
+}

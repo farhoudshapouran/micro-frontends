@@ -7,6 +7,8 @@ import { PersistGate, persistor } from "@repo/data-context/store";
 import { ThemeProvider } from "@repo/ui/theme-provider";
 // layout
 import MainLayout from "@/sections/layouts/main";
+// components
+import ProgressBar from "@/components/progress-bar";
 
 // ----------------------------------------------------------------------
 
@@ -15,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ReduxProvider>
       <ThemeProvider>
         <PersistGate loading={null} persistor={persistor}>
+          <ProgressBar />
           <MainLayout>
             <Component {...pageProps} />
           </MainLayout>
