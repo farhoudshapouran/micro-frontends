@@ -18,7 +18,7 @@ export default function HomeHero() {
         <Link
           target="_blank"
           rel="noreferrer"
-          href=""
+          href="https://github.com/farhoudshapouran/micro-frontends"
           className={cn(buttonVariants({ variant: "outline" }))}
         >
           <Iconify icon="fa:github" className="mr-2 h-4 w-4" />
