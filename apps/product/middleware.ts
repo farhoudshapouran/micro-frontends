@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // the list of all allowed origins
-const allowedOrigins = ["http://localhost:3000", "https://example-1.com"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://micro-frontends-demo.vercel.app",
+];
 
 export function middleware(request: NextRequest) {
   // retrieve the current response

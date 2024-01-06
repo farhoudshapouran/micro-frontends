@@ -4,7 +4,8 @@ import { NextRequest, NextResponse } from "next/server";
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:3001",
-  "https://example-1.com",
+  "https://micro-frontends-demo.vercel.app",
+  "https://micro-frontends-product.vercel.app",
 ];
 
 export function middleware(request: NextRequest) {
