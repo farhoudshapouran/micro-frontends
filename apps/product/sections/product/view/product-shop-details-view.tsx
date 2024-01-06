@@ -11,12 +11,12 @@ import { useGetProduct } from "@/api/product";
 import { Button } from "@repo/ui/components/button";
 import { Iconify } from "@repo/ui/components/iconify";
 import { Breadcrumbs } from "@repo/ui/components/breadcrumbs";
+//
 import ProductDetailsSummary from "../product-details-summary";
 import ProductDetailsCarousel from "../product-details-carousel";
+import RelatedProducts from "@/components/related-products";
 
 const EmptyContent = lazy(() => import("@repo/ui/components/empty-content"));
-
-const RelatedProducts = lazy(() => import("@/components/latest-products"));
 
 type Props = {
   id: string;
@@ -64,9 +64,7 @@ export default function ProductShopDetailsView({ id }: Props) {
         <h3 className="text-lg font-bold mb-4 overflow-auto">
           Related Products
         </h3>
-        <Suspense>
-          <RelatedProducts productId={id} />
-        </Suspense>
+        <RelatedProducts productId={id} />
       </div>
     </div>
   );
