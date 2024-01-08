@@ -24,6 +24,13 @@ export default function ProductDetailsCarousel({ product }: Props) {
   const [carouselLargeApi, setCarouselLargeApi] = useState<CarouselApi>();
   const [carouselThumbApi, setCarouselThumbApi] = useState<CarouselApi>();
 
+  useEffect(() => {
+    setSelectedIndex(0);
+    if (carouselLargeApi) {
+      carouselLargeApi.scrollTo(0);
+    }
+  }, [product]);
+
   const onThumbClick = useCallback(
     (index: number) => {
       if (!carouselLargeApi || !carouselThumbApi) return;
