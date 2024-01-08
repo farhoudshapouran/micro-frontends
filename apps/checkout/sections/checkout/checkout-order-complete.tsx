@@ -88,7 +88,7 @@ export default function CheckoutOrderComplete({ open, onReset }: Props) {
             Thanks for placing order
           </p>
           <Separator />
-          <div className="flex space-x-4 w-full">
+          <div className="flex flex-col-reverse gap-4 md:flex-row w-full">
             <Button
               size="lg"
               variant="outline"
