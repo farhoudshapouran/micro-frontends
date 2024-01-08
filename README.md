@@ -44,9 +44,9 @@ Different port numbers are used to host applications. The following table shows 
 | Port   | Team                    | Responsibility                                    |
 | ------ | ----------------------- | ------------------------------------------------- |
 | `3000` | - Host Application -    | infrastructure (app shell)                        |
-| `3001` | - Team Product -        | shop page, product details page, search           |
-| `3002` | - Team Checkout -       | recommendations, related and latest products      |
-| `3003` | - Team Inspire -        | cart, checkout process                            |
+| `3001` | Team Product            | shop page, product details page, search           |
+| `3002` | Team Checkout           | recommendations, related and latest products      |
+| `3003` | Team Inspire            | cart, checkout process                            |
 
 All shared reusable UI components, utils, configs, and data context are in the `packages` folder.
 
