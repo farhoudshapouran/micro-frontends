@@ -14,9 +14,11 @@ export default function ProgressBar() {
     NProgress.configure({ showSpinner: false });
 
     const handleAnchorClick = (event: MouseEvent) => {
-      const targetUrl = (event.currentTarget as HTMLAnchorElement).href;
+      const anchorElement = event.currentTarget as HTMLAnchorElement;
+      const targetUrl = anchorElement.href;
+      const isExternal = anchorElement.target === "_blank";
       const currentUrl = window.location.href;
-      if (targetUrl !== currentUrl) {
+      if (!isExternal && targetUrl !== currentUrl) {
         NProgress.start();
       }
     };

@@ -6,7 +6,7 @@ import Header from "./header";
 import Footer from "./footer";
 import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 // ----------------------------------------------------------------------
 
@@ -23,7 +23,8 @@ export default function MainLayout({ children }: Props) {
     <div
       className={cn(
         "min-h-screen bg-background font-sans antialiased",
-        inter.variable
+        inter.variable,
+        "font-sans"
       )}
     >
       <div className="relative flex min-h-screen flex-col">

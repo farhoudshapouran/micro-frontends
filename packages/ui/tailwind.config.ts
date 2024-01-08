@@ -19,6 +19,10 @@ const config: Config = {
     "../../packages/ui/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["var(--font-inter)"],
+      mono: ["var(--font-roboto-mono)"],
+    },
     container: {
       center: true,
       padding: "1.5rem",
