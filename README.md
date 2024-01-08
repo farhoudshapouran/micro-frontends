@@ -37,7 +37,7 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 ## Folder structure and ports
 
-Each app has its folder inside the apps folder. Each app folder contains the actual application (e.g. `product`, `inspire`, `checkout`).
+Each app has its folder inside the `apps` folder. Each app folder contains the actual application (e.g. `product`, `inspire`, `checkout`).
 
 Different port numbers are used to host applications. The following table shows which teams own which application.
 
