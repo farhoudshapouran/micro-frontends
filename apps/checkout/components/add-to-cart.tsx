@@ -2,11 +2,8 @@ import { Button } from "@repo/ui/components/button";
 import { Iconify } from "@repo/ui/components/iconify";
 import { useCallback } from "react";
 import { ICheckoutItem } from "@repo/data-context/types/checkout";
-import { useAppSelector, useAppDispatch } from "@repo/data-context/hooks";
-import {
-  CheckoutState,
-  onAddToCart,
-} from "@repo/data-context/reducers/checkout-reducer";
+import { useAppDispatch } from "@repo/data-context/hooks";
+import { onAddToCart } from "@repo/data-context/reducers/checkout-reducer";
 import { useToast } from "@repo/ui/components/toast/use-toast";
 
 // ----------------------------------------------------------------------

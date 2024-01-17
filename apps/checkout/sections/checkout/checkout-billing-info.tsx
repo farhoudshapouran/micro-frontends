@@ -4,13 +4,10 @@ import { Iconify } from "@repo/ui/components/iconify";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@repo/ui/components/card";
 // types
-import type { ICheckoutItem } from "@repo/data-context/types/checkout";
 import type { IAddressItem } from "@repo/data-context/types/address";
 
 // ----------------------------------------------------------------------

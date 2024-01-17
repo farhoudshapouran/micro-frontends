@@ -5,8 +5,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@repo/ui/components/carousel";
 import { AspectRatio } from "@repo/ui/components/aspect-ratio";

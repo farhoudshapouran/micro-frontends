@@ -1,7 +1,5 @@
 // api
 import { useRelatedProducts } from "@/api/product";
-// components
-import { ScrollArea, ScrollBar } from "@repo/ui/components/scroll-area";
 // sections
 import ProductList from "@/sections/product/product-list";
 

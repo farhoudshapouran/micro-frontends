@@ -1,12 +1,9 @@
 import Link from "next/link";
-import { Suspense, lazy } from "react";
 import { useAppSelector, useAppDispatch } from "@repo/data-context/hooks";
 import {
   login,
   AccountState,
 } from "@repo/data-context/reducers/account-reducer";
-
-// const Card = lazy(() => import("@repo/ui/card"));
 
 export default function Cart() {
   const { isAuthenticated } = useAppSelector<AccountState>(

@@ -4,8 +4,6 @@ import { Controller, useFormContext } from "react-hook-form";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@repo/ui/components/card";

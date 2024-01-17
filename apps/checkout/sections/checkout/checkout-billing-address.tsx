@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useCallback } from "react";
 // data-context
 import { useAppSelector, useAppDispatch } from "@repo/data-context/hooks";
@@ -6,33 +5,17 @@ import {
   CheckoutState,
   onNextStep,
   onBackStep,
-  onApplyDiscount,
-  onDeleteCart,
-  onIncreaseQuantity,
-  onDecreaseQuantity,
   onCreateBilling,
 } from "@repo/data-context/reducers/checkout-reducer";
 // components
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@repo/ui/components/card";
-import EmptyContent from "@repo/ui/components/empty-content";
 import { Button } from "@repo/ui/components/button";
 import { Iconify } from "@repo/ui/components/iconify";
 // types
 import type { ICheckoutItem } from "@repo/data-context/types/checkout";
 import type { IAddressItem } from "@repo/data-context/types/address";
-// routes
-import { paths } from "@repo/utils/routes/paths";
 // mock
 import { addressBook } from "@repo/data-context/mock/address";
 // sections
-import CheckoutCartProductList from "./checkout-cart-product-list";
 import CheckoutSummary from "./checkout-summary";
 import AddressItem from "../address/address-item";
 

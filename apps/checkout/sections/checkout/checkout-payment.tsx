@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useCallback } from "react";
 import * as Yup from "yup";
 import { useForm } from "react-hook-form";
@@ -10,33 +9,10 @@ import {
   onNextStep,
   onBackStep,
   onGotoStep,
-  onReset,
-  onApplyDiscount,
-  onDeleteCart,
-  onIncreaseQuantity,
-  onDecreaseQuantity,
-  onCreateBilling,
   onApplyShipping,
 } from "@repo/data-context/reducers/checkout-reducer";
 // components
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@repo/ui/components/form";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@repo/ui/components/card";
-import EmptyContent from "@repo/ui/components/empty-content";
+import { Form } from "@repo/ui/components/form";
 import { Button } from "@repo/ui/components/button";
 import { Iconify } from "@repo/ui/components/iconify";
 // types
@@ -46,15 +22,7 @@ import type {
   ICheckoutPaymentOption,
   ICheckoutCardOption,
 } from "@repo/data-context/types/checkout";
-import type { IAddressItem } from "@repo/data-context/types/address";
-// routes
-import { paths } from "@repo/utils/routes/paths";
-// mock
-import { addressBook } from "@repo/data-context/mock/address";
-// sections
-import CheckoutCartProductList from "./checkout-cart-product-list";
 import CheckoutSummary from "./checkout-summary";
-import AddressItem from "../address/address-item";
 import CheckoutDelivery from "./checkout-delivery";
 import CheckoutPaymentMethods from "./checkout-payment-methods";
 import CheckoutBillingInfo from "./checkout-billing-info";

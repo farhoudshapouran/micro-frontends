@@ -2,16 +2,7 @@ import Image from "next/image";
 // types
 import type { ICheckoutItem } from "@repo/data-context/types/checkout";
 // components
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@repo/ui/components/table";
+import { TableCell, TableRow } from "@repo/ui/components/table";
 import { AspectRatio } from "@repo/ui/components/aspect-ratio";
 import { IncrementerButton } from "@repo/ui/components/incrementer-button";
 import { Button } from "@repo/ui/components/button";

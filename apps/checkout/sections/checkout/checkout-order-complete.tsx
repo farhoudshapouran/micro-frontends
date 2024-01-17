@@ -4,16 +4,7 @@ import { useAppSelector } from "@repo/data-context/hooks";
 import { CheckoutState } from "@repo/data-context/reducers/checkout-reducer";
 // components
 import { Button } from "@repo/ui/components/button";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@repo/ui/components/dialog";
+import { Dialog, DialogContent } from "@repo/ui/components/dialog";
 import { Separator } from "@repo/ui/components/separator";
 import { Iconify } from "@repo/ui/components/iconify";
 

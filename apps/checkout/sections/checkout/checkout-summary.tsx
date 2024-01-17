@@ -5,8 +5,6 @@ import { Iconify } from "@repo/ui/components/iconify";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@repo/ui/components/card";

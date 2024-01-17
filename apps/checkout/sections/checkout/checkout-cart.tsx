@@ -13,8 +13,6 @@ import {
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@repo/ui/components/card";
@@ -29,7 +27,6 @@ import { paths } from "@repo/utils/routes/paths";
 import CheckoutCartProductList from "./checkout-cart-product-list";
 import CheckoutSummary from "./checkout-summary";
 import { useCallback } from "react";
-import { cn } from "@repo/ui/lib/utils";
 
 // ----------------------------------------------------------------------
 

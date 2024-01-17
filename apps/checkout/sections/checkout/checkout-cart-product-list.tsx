@@ -4,9 +4,6 @@ import type { ICheckoutItem } from "@repo/data-context/types/checkout";
 import {
   Table,
   TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
